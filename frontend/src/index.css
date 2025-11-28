@@ -3,3 +3,42 @@
 @tailwind utilities;
 /* index.css */
 @import url('leaflet/dist/leaflet.css');
+
+
+/* Fix Leaflet map overlapping modals and dialogs */
+.leaflet-container,
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom,
+.leaflet-control {
+  z-index: 1 !important;
+}
+
+/* Ensure modals/dialogs always stay above map */
+.modal,
+.modal-overlay,
+.dialog-backdrop,
+.dialog {
+  position: fixed !important;
+  z-index: 9999 !important;
+}
+
+
+body {
+  @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300;
+}
+
+/* Fix map overlap */
+.leaflet-container,
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom,
+.leaflet-control {
+  z-index: 1 !important;
+}
+
+.modal,
+.modal-overlay {
+  position: fixed !important;
+  z-index: 9999 !important;
+}
