@@ -1,13 +1,26 @@
 <!doctype html>
 <html lang="en">
-  <head>
+    <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
+    <meta name="theme-color" content="#3b82f6" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
+    <link rel="apple-touch-icon" href="https://th.bing.com/th/id/R.60efe275d77aaebadda2ad9d6a330cfb?rik=T2Grv%2bxUCHOb9g&riu=http%3a%2f%2fgramalaya.org%2fwp-content%2fuploads%2f2024%2f06%2fMinistry_of_Jal_Shakti.png&ehk=mwuh3L9BahWJgO9RCHqBD6kFy1lKFRK6EKAUu7q2tug%3d&risl=&pid=ImgRaw&r=0" />
+    <title>Water Level Dashboard</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  }
+    </script>
   </body>
 </html>
