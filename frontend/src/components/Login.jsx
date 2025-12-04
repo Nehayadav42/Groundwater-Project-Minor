@@ -7,12 +7,14 @@ const Login = ({ onSwitchToRegister }) => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
+  const [info, setInfo] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const { login } = useAuth();
+  const { login, forgotPassword } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    setInfo('');
     setIsLoading(true);
 
     try {
@@ -28,23 +30,10 @@ const Login = ({ onSwitchToRegister }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-teal-50 flex items-center justify-center p-4">
-      <div className="max-w-md w-full">
-        {/* Logo and Header */}
-        <div className="text-center mb-8">
-          <div className="mx-auto w-20 h-20 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full flex items-center justify-center mb-4">
-            <img 
-              src="https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop" 
-              alt="Ministry of Jal Shakti"
-              className="w-16 h-16 rounded-full object-cover"
-            />
-          </div>
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Ministry of Jal Shakti</h1>
-          <p className="text-gray-600">DWLR Water Level Monitoring System</p>
-        </div>
-
+    <>
+    <div className="w-full max-w-lg">
         {/* Login Form */}
-        <div className="bg-white rounded-xl shadow-lg p-8">
+        <div className="bg-white/95 rounded-2xl shadow-xl p-10 border border-blue-50">
           <div className="flex items-center justify-center mb-6">
             <LogIn className="w-6 h-6 text-blue-600 mr-2" />
             <h2 className="text-xl font-semibold text-gray-900">Sign In</h2>
@@ -53,6 +42,12 @@ const Login = ({ onSwitchToRegister }) => {
           {error && (
             <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
               {error}
+            </div>
+          )}
+
+          {info && !error && (
+            <div className="mb-4 p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-700 text-sm">
+              {info}
             </div>
           )}
 
@@ -107,7 +102,31 @@ const Login = ({ onSwitchToRegister }) => {
             </button>
           </form>
 
-          <div className="mt-6 text-center">
+          <div className="mt-6 text-center space-y-2">
+            <button
+              type="button"
+              className="text-xs text-blue-600 hover:text-blue-700 font-medium"
+              onClick={async () => {
+                const emailAddress = email.trim();
+                setError('');
+                setInfo('');
+
+                if (!emailAddress) {
+                  setError('Please enter your email above to request a password reset.');
+                  return;
+                }
+
+                const ok = await forgotPassword(emailAddress);
+                if (ok) {
+                  setInfo('If an account exists for this email, a password reset link has been initiated.');
+                } else {
+                  setError('Unable to start password reset right now. Please try again later.');
+                }
+              }}
+            >
+              Forgot password?
+            </button>
+
             <p className="text-sm text-gray-600">
               Don&apos;t have an account?{' '}
               <button
@@ -118,20 +137,9 @@ const Login = ({ onSwitchToRegister }) => {
               </button>
             </p>
           </div>
-
-          {/* Demo Credentials */}
-          <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-            <h3 className="text-sm font-medium text-gray-700 mb-2">Demo Credentials:</h3>
-            <div className="text-xs text-gray-600 space-y-1">
-              <p><strong>Policymaker:</strong> policy@jalshakti.gov.in</p>
-              <p><strong>Stakeholder:</strong> stakeholder@waterboard.gov.in</p>
-              <p><strong>Public:</strong> citizen@example.com</p>
-              <p><strong>Password:</strong> password123</p>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
+  </>
   );
 };
 

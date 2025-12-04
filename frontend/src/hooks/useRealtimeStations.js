@@ -60,10 +60,14 @@ export const useRealtimeStations = (refreshInterval = 30000) => {
   const [loading, setLoading] = useState(true);
   const [detailLoading, setDetailLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
 
-  const fetchStations = useCallback(async () => {
+  const fetchStations = useCallback(async (isInitial = false) => {
     try {
-      setLoading(true);
+      // Only show loading on initial load, not on subsequent updates
+      if (isInitial) {
+        setLoading(true);
+      }
       const response = await fetch(`${API_BASE_URL}/api/stations`);
       if (!response.ok) {
         throw new Error('Failed to load station list');
@@ -74,14 +78,18 @@ export const useRealtimeStations = (refreshInterval = 30000) => {
         .filter(Boolean);
 
       if (normalized.length) {
-        setStations(normalized);
+        setStations((prevStations) => {
+          // Only update if data actually changed to prevent unnecessary re-renders
+          const hasChanged = JSON.stringify(prevStations) !== JSON.stringify(normalized);
+          return hasChanged ? normalized : prevStations;
+        });
         setSelectedStationId((current) => current || normalized[0].id);
       }
       setError(null);
     } catch (err) {
       console.error('Station fetch error:', err);
       setError(err.message || 'Unable to load stations');
-      if (!stations.length) {
+      if (isInitial) {
         const fallback = mockStations
           .map((station) => normalizeStationSummary(station))
           .filter(Boolean);
@@ -89,14 +97,20 @@ export const useRealtimeStations = (refreshInterval = 30000) => {
         setSelectedStationId((current) => current || fallback[0]?.id || null);
       }
     } finally {
-      setLoading(false);
+      if (isInitial) {
+        setLoading(false);
+        setIsInitialLoad(false);
+      }
     }
-  }, [stations.length]);
+  }, []);
 
-  const fetchStationDetail = useCallback(async (stationId) => {
+  const fetchStationDetail = useCallback(async (stationId, isInitial = false) => {
     if (!stationId) return;
     try {
-      setDetailLoading(true);
+      // Only show loading on initial load
+      if (isInitial) {
+        setDetailLoading(true);
+      }
       const response = await fetch(`${API_BASE_URL}/api/stations/${stationId}`);
       if (!response.ok) {
         throw new Error('Failed to load station details');
@@ -105,50 +119,65 @@ export const useRealtimeStations = (refreshInterval = 30000) => {
       const normalized = normalizeStationSummary(station);
       const series = transformSeries(station.time_series || []);
 
-      setSelectedStationDetail({
-        ...normalized,
-        timeSeries: series,
+      setSelectedStationDetail((prevDetail) => {
+        // Only update if data actually changed
+        const newDetail = {
+          ...normalized,
+          timeSeries: series,
+        };
+        const hasChanged = JSON.stringify(prevDetail) !== JSON.stringify(newDetail);
+        return hasChanged ? newDetail : prevDetail;
       });
-      setChartData(series);
+      setChartData((prevData) => {
+        const hasChanged = JSON.stringify(prevData) !== JSON.stringify(series);
+        return hasChanged ? series : prevData;
+      });
       setError(null);
     } catch (err) {
       console.error('Station detail error:', err);
       setError(err.message || 'Unable to load station details');
 
-      const fallbackStation = mockStations.find((s) => s.id === stationId);
-      if (fallbackStation) {
-        const normalized = normalizeStationSummary(fallbackStation);
-        const series = transformSeries(generateChartData(stationId, 7));
-        setSelectedStationDetail({
-          ...normalized,
-          timeSeries: series,
-        });
-        setChartData(series);
+      if (isInitial) {
+        const fallbackStation = mockStations.find((s) => s.id === stationId);
+        if (fallbackStation) {
+          const normalized = normalizeStationSummary(fallbackStation);
+          const series = transformSeries(generateChartData(stationId, 7));
+          setSelectedStationDetail({
+            ...normalized,
+            timeSeries: series,
+          });
+          setChartData(series);
+        }
       }
     } finally {
-      setDetailLoading(false);
+      if (isInitial) {
+        setDetailLoading(false);
+      }
     }
   }, []);
 
+  // Initial load
   useEffect(() => {
-    fetchStations();
+    fetchStations(true);
   }, [fetchStations]);
 
+  // Initial station detail load
   useEffect(() => {
     if (!selectedStationId) return;
-    fetchStationDetail(selectedStationId);
+    fetchStationDetail(selectedStationId, true);
   }, [fetchStationDetail, selectedStationId]);
 
+  // Periodic updates (without loading states)
   useEffect(() => {
-    if (!refreshInterval || refreshInterval <= 0) return undefined;
+    if (!refreshInterval || refreshInterval <= 0 || isInitialLoad) return undefined;
     const intervalId = setInterval(() => {
-      fetchStations();
+      fetchStations(false); // Don't show loading on updates
       if (selectedStationId) {
-        fetchStationDetail(selectedStationId);
+        fetchStationDetail(selectedStationId, false); // Don't show loading on updates
       }
     }, refreshInterval);
     return () => clearInterval(intervalId);
-  }, [fetchStations, fetchStationDetail, refreshInterval, selectedStationId]);
+  }, [fetchStations, fetchStationDetail, refreshInterval, selectedStationId, isInitialLoad]);
 
   const activeStations = useMemo(
     () => stations.filter((station) => station.status === 'active'),

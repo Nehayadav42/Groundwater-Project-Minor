@@ -7,10 +7,10 @@ const rootElement = document.getElementById('root');
 
 if (rootElement) {
   createRoot(rootElement).render(
-    <StrictMode>
-      <App />
-    </StrictMode>
-  );
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
 }
 
 //  Register Service Worker here

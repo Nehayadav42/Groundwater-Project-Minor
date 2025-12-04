@@ -8,6 +8,7 @@ import {
   Legend,
   ComposedChart
 } from 'recharts';
+import { formatISTDate, formatISTTime } from '../utils/dateUtils';
 
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
@@ -15,7 +16,7 @@ const CustomTooltip = ({ active, payload, label }) => {
     return (
       <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
         <p className="font-medium text-gray-900">
-          {date.toLocaleDateString()} {date.toLocaleTimeString()}
+          {formatISTDate(date)} {formatISTTime(date)}
         </p>
         {payload.map((entry, index) => (
           <p key={index} style={{ color: entry.color }} className="text-sm">
@@ -32,7 +33,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 const ChartView = ({ data = [], title }) => {
   const formatXAxisLabel = (tickItem) => {
     const date = new Date(tickItem);
-    return date.toLocaleDateString();
+    return formatISTDate(date);
   };
 
   return (

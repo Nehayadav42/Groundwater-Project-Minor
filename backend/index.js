@@ -5,6 +5,7 @@ const connectDB = require('./src/config/db');
 const { startScheduler } = require('./src/config/scheduler');
 const stationRoutes = require('./src/routes/stationRoutes');
 const userRoutes = require('./src/routes/userRoutes');
+const evaluationRoutes = require('./src/routes/evaluationRoutes');
 const { syncAllDataSources } = require('./src/services/dataSyncService');
 
 dotenv.config();
@@ -17,16 +18,23 @@ app.use(express.json());
 // API Routes
 app.use('/api/stations', stationRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/evaluations', evaluationRoutes);
 
 // Welcome Route
 app.get('/', (req, res) => {
     res.send('Groundwater Project API is running...');
 });
 
-// --- Temporary Test Route ---
+// --- Temporary Test Routes ---
 app.get('/api/sync-now', (req, res) => {
-    syncAllDataSources(); // <-- Updated function call
+    syncAllDataSources();
     res.send("Manual data sync for ALL sources triggered! Check the console.");
+});
+
+app.get('/api/simulate-now', async (req, res) => {
+    const { simulateRealtimeUpdate } = require('./src/services/realtimeSimulator');
+    await simulateRealtimeUpdate();
+    res.send("Real-time simulation triggered! Check the console.");
 });
 // --------------------------
 

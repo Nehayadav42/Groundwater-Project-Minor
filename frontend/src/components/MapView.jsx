@@ -1,6 +1,8 @@
+import { memo } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import { Droplets, Activity, AlertTriangle, Wrench } from 'lucide-react';
+import { formatISTDateTime } from '../utils/dateUtils';
 
 // Fix for default markers
 delete L.Icon.Default.prototype._getIconUrl;
@@ -52,7 +54,7 @@ const createCustomIcon = (status = 'active', isSelected = false) => {
   });
 };
 
-const MapView = ({ stations = [], selectedStation, onStationSelect }) => {
+const MapView = memo(({ stations = [], selectedStation, onStationSelect }) => {
   const getStatusIcon = (status = 'active') => {
     const value = status.toLowerCase();
     switch (value) {
@@ -107,7 +109,7 @@ const MapView = ({ stations = [], selectedStation, onStationSelect }) => {
           const wellDepth = station.wellDepth ? `${station.wellDepth}m` : 'N/A';
           const aquifer = station.aquifer || 'Not specified';
           const lastUpdated = station.lastUpdate
-            ? new Date(station.lastUpdate).toLocaleString()
+            ? formatISTDateTime(station.lastUpdate)
             : 'Unavailable';
 
           return (
@@ -148,6 +150,8 @@ const MapView = ({ stations = [], selectedStation, onStationSelect }) => {
       </MapContainer>
     </div>
   );
-};
+});
+
+MapView.displayName = 'MapView';
 
 export default MapView;

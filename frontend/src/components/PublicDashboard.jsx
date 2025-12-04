@@ -1,9 +1,13 @@
 import { useMemo } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { Droplets, MapPin, Clock, Info, AlertCircle } from 'lucide-react';
+import { Clock, Info, AlertCircle } from 'lucide-react';
 import MapView from './MapView';
 import StationList from './StationList';
+import EvaluationPanel from './EvaluationPanel';
+import LastUpdateSection from './LastUpdateSection';
+import LiveDataSection from './LiveDataSection';
 import { useRealtimeStations } from '../hooks/useRealtimeStations';
+import { formatISTDateTime, formatISTDate } from '../utils/dateUtils';
 
 const PublicDashboard = ({ refreshInterval }) => {
   const {
@@ -16,16 +20,6 @@ const PublicDashboard = ({ refreshInterval }) => {
     loading,
     error,
   } = useRealtimeStations(refreshInterval || 30000);
-
-  const latestUpdate = useMemo(() => {
-    if (selectedStationDetail?.lastUpdate) {
-      return new Date(selectedStationDetail.lastUpdate).toLocaleString();
-    }
-    if (stations[0]?.lastUpdate) {
-      return new Date(stations[0].lastUpdate).toLocaleString();
-    }
-    return 'Unavailable';
-  }, [selectedStationDetail, stations]);
 
   const chartWindow = useMemo(() => {
     if (!chartData.length) return [];
@@ -56,34 +50,12 @@ const PublicDashboard = ({ refreshInterval }) => {
         </p>
       </div>
 
-      {/* Quick Stats */}
+      {/* Quick Stats - Using memoized components for independent updates */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-            <MapPin className="w-6 h-6 text-blue-600" />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-900">Total Stations</h3>
-          <p className="text-3xl font-bold text-blue-600">{stations.length}</p>
-          <p className="text-sm text-gray-600">Monitoring Points</p>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-            <Droplets className="w-6 h-6 text-green-600" />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-900">Active Stations</h3>
-          <p className="text-3xl font-bold text-green-600">{activeStations.length}</p>
-          <p className="text-sm text-gray-600">Currently Online</p>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-3">
-            <Clock className="w-6 h-6 text-teal-600" />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-900">Last Update</h3>
-          <p className="text-lg font-bold text-teal-600">{latestUpdate}</p>
-          <p className="text-sm text-gray-600">Real-time Data</p>
-        </div>
+        <LiveDataSection stations={stations} activeStations={activeStations} />
+        <LastUpdateSection 
+          lastUpdateTime={selectedStationDetail?.lastUpdate || stations[0]?.lastUpdate || null} 
+        />
       </div>
 
       {error && (
@@ -117,9 +89,16 @@ const PublicDashboard = ({ refreshInterval }) => {
 
       {/* Selected Station Info */}
       {selectedStationId && selectedStationDetail && (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Station Details */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
+        <>
+          {/* Evaluation Panel */}
+          <EvaluationPanel 
+            stationId={selectedStationId} 
+            stationName={selectedStationDetail.name} 
+          />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Station Details */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
               {selectedStationDetail.name}
             </h3>
@@ -169,7 +148,7 @@ const PublicDashboard = ({ refreshInterval }) => {
                 <Clock className="w-4 h-4 inline mr-1" />
                 Last updated:{' '}
                 {selectedStationDetail.lastUpdate
-                  ? new Date(selectedStationDetail.lastUpdate).toLocaleString()
+                  ? formatISTDateTime(selectedStationDetail.lastUpdate)
                   : 'Unavailable'}
               </div>
             </div>
@@ -184,11 +163,11 @@ const PublicDashboard = ({ refreshInterval }) => {
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis 
                     dataKey="time" 
-                    tickFormatter={(value) => new Date(value).toLocaleDateString()}
+                    tickFormatter={(value) => formatISTDate(new Date(value))}
                   />
                   <YAxis />
                   <Tooltip 
-                    labelFormatter={(value) => new Date(value).toLocaleString()}
+                    labelFormatter={(value) => formatISTDateTime(new Date(value))}
                     formatter={(value) => [`${Number(value).toFixed(2)}m`, 'Water Level']}
                   />
                   <Line 
@@ -203,6 +182,7 @@ const PublicDashboard = ({ refreshInterval }) => {
             </div>
           </div>
         </div>
+        </>
       )}
 
       {/* Information Section */}

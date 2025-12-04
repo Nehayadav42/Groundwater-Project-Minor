@@ -1,6 +1,8 @@
+import { memo } from 'react';
 import { Activity, AlertTriangle, Wrench, Droplets, Clock, Map } from 'lucide-react';
+import { formatISTDateTime } from '../utils/dateUtils';
 
-const StationList = ({ 
+const StationList = memo(({ 
   stations, 
   selectedStation, 
   onStationSelect 
@@ -83,7 +85,7 @@ const StationList = ({
                 <span>
                   Updated:{' '}
                   {station.lastUpdate
-                    ? new Date(station.lastUpdate).toLocaleString()
+                    ? formatISTDateTime(station.lastUpdate)
                     : 'Unavailable'}
                 </span>
               </div>
@@ -93,6 +95,8 @@ const StationList = ({
       </div>
     </div>
   );
-};
+});
+
+StationList.displayName = 'StationList';
 
 export default StationList;

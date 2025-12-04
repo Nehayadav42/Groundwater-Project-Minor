@@ -2,7 +2,9 @@ import { useMemo, useState } from 'react';
 import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 import { Activity, Droplets, TrendingUp, AlertCircle, Download, Bell } from 'lucide-react';
 import MapView from './MapView';
+import EvaluationPanel from './EvaluationPanel';
 import { useRealtimeStations } from '../hooks/useRealtimeStations';
+import { formatISTDateTime } from '../utils/dateUtils';
 
 const StakeholderDashboard = ({ refreshInterval }) => {
   const [timeRange, setTimeRange] = useState('7d');
@@ -47,7 +49,7 @@ const StakeholderDashboard = ({ refreshInterval }) => {
             ? 'Station offline - field team notified'
             : 'Maintenance scheduled - expect limited readings',
         time: station.lastUpdate
-          ? new Date(station.lastUpdate).toLocaleString()
+          ? formatISTDateTime(station.lastUpdate)
           : 'Awaiting update',
       }));
   }, [stations]);
@@ -172,13 +174,13 @@ const StakeholderDashboard = ({ refreshInterval }) => {
         </div>
 
         {/* Alerts Panel */}
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <div className="flex items-center mb-4">
+        <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col h-[400px]">
+          <div className="flex items-center mb-4 flex-shrink-0">
             <Bell className="w-5 h-5 text-yellow-500 mr-2" />
             <h3 className="text-lg font-semibold text-gray-900">Recent Alerts</h3>
           </div>
           
-          <div className="space-y-3">
+          <div className="flex-1 overflow-y-auto space-y-3">
             {alerts.length > 0 ? (
               alerts.map((alert) => (
                 <div
@@ -199,7 +201,7 @@ const StakeholderDashboard = ({ refreshInterval }) => {
             )}
           </div>
 
-          <button className="w-full mt-4 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+          <button className="w-full mt-4 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex-shrink-0">
             View All Alerts
           </button>
         </div>
@@ -247,6 +249,14 @@ const StakeholderDashboard = ({ refreshInterval }) => {
         </div>
       )}
 
+      {/* Station Evaluation */}
+      {selectedStationId && selectedStationDetail && (
+        <EvaluationPanel 
+          stationId={selectedStationId} 
+          stationName={selectedStationDetail.name} 
+        />
+      )}
+
       {/* Station Details */}
       {selectedStationId && selectedStationDetail && (
         <div className="bg-white rounded-lg shadow-lg p-6">
@@ -272,7 +282,7 @@ const StakeholderDashboard = ({ refreshInterval }) => {
             </div>
             <div className="p-4 bg-gray-50 rounded-lg">
               <h4 className="font-medium text-gray-900">Aquifer Type</h4>
-              <p className="text-lg text-gray-600">{selectedStationDetail.aquifer}</p>
+              <p className="text-lg text-gray-600">{selectedStationDetail.aquifer || 'N/A'}</p>
             </div>
           </div>
         </div>
