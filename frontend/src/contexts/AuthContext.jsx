@@ -77,8 +77,9 @@ export const AuthProvider = ({ children }) => {
           id: data._id,
           name: data.name,
           email: data.email,
-          // Default to public role for backend users
-          role: data.role || 'public'
+          role: data.role || 'public',
+          department: data.department || null,
+          organization: data.organization || null
         };
 
         setAuthState({
@@ -121,7 +122,14 @@ export const AuthProvider = ({ children }) => {
       const response = await fetch(`${API_BASE_URL}/api/users/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, password })
+        body: JSON.stringify({ 
+          name, 
+          email, 
+          password,
+          role,
+          department,
+          organization
+        })
       });
 
       if (response.ok) {
@@ -130,7 +138,10 @@ export const AuthProvider = ({ children }) => {
           id: data._id,
           name: data.name,
           email: data.email,
-          role: 'public'
+          // Preserve the role from registration, fallback to backend role or 'public'
+          role: data.role || role || 'public',
+          department: data.department || department || null,
+          organization: data.organization || organization || null
         };
 
         setAuthState({

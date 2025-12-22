@@ -41,5 +41,25 @@ app.get('/api/simulate-now', async (req, res) => {
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
     console.log(` Server running on http://localhost:${PORT}`);
+    
+    // Log API configuration status
+    console.log('\n--- API Configuration Status ---');
+    if (process.env.API_SOURCE_1_URL) {
+        console.log(`✓ API Source 1 URL: ${process.env.API_SOURCE_1_URL}`);
+        console.log(`  API Key: ${process.env.API_SOURCE_1_KEY ? '✓ Configured' : '✗ Not Set'}`);
+        console.log(`  Key Type: ${process.env.API_SOURCE_1_KEY_TYPE || 'header'}`);
+    } else {
+        console.log('✗ API Source 1: URL not configured');
+    }
+    
+    if (process.env.API_SOURCE_2_URL) {
+        console.log(`✓ API Source 2 URL: ${process.env.API_SOURCE_2_URL}`);
+        console.log(`  API Key: ${process.env.API_SOURCE_2_KEY ? '✓ Configured' : '✗ Not Set'}`);
+        console.log(`  Key Type: ${process.env.API_SOURCE_2_KEY_TYPE || 'header'}`);
+    } else {
+        console.log('✗ API Source 2: URL not configured');
+    }
+    console.log('--------------------------------\n');
+    
     startScheduler();
 });

@@ -82,7 +82,7 @@ const Dashboard = () => {
               {/* Ministry Logo */}
               <div className="flex items-center space-x-3">
                 <img 
-                  src="https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop" 
+                  src="https://plus.unsplash.com/premium_photo-1679607697878-ce838322c122?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNhdmUlMjB3YXRlcnxlbnwwfHwwfHx8MA%3D%3D" 
                   alt="Ministry of Jal Shakti"
                   className="w-10 h-10 rounded-full object-cover"
                 />

@@ -14,7 +14,7 @@ const generateToken = (id) => {
 // @desc    Register a new user
 // @route   POST /api/users/register
 const registerUser = asyncHandler(async (req, res) => {
-    const { name, email, password } = req.body;
+    const { name, email, password, role, department, organization } = req.body;
 
     // Check if user already exists
     const userExists = await User.findOne({ email });
@@ -23,14 +23,24 @@ const registerUser = asyncHandler(async (req, res) => {
         throw new Error('User already exists');
     }
 
-    // Create new user
-    const user = await User.create({ name, email, password });
+    // Create new user with role, department, and organization
+    const user = await User.create({ 
+        name, 
+        email, 
+        password,
+        role: role || 'public',
+        department: department || null,
+        organization: organization || null
+    });
 
     if (user) {
         res.status(201).json({
             _id: user._id,
             name: user.name,
             email: user.email,
+            role: user.role,
+            department: user.department,
+            organization: user.organization,
             token: generateToken(user._id),
         });
     } else {
@@ -53,6 +63,9 @@ const loginUser = asyncHandler(async (req, res) => {
             _id: user._id,
             name: user.name,
             email: user.email,
+            role: user.role,
+            department: user.department,
+            organization: user.organization,
             token: generateToken(user._id),
         });
     } else {
