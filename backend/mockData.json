@@ -1,0 +1,852 @@
+[
+  {
+    "id": "DWLR_001",
+    "name": "Shyamla Hills Station, Bhopal",
+    "location": { "lat": 23.2599, "lng": 77.4126 },
+    "status": "Normal",
+    "wellDepth": 55,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 15.2},
+      {"date": "2025-09-16", "water_level": 15.1},
+      {"date": "2025-09-17", "water_level": 15.5},
+      {"date": "2025-09-18", "water_level": 15.4},
+      {"date": "2025-09-19", "water_level": 15.6},
+      {"date": "2025-09-20", "water_level": 15.5},
+      {"date": "2025-09-21", "water_level": 15.7}
+    ]
+  },
+  {
+    "id": "DWLR_002",
+    "name": "Rajwada Palace Station, Indore",
+    "location": { "lat": 22.7196, "lng": 75.8577 },
+    "status": "Warning",
+    "wellDepth": 48,
+    "aquifer": "Basalt",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 12.8},
+      {"date": "2025-09-16", "water_level": 12.6},
+      {"date": "2025-09-17", "water_level": 12.5},
+      {"date": "2025-09-18", "water_level": 12.2},
+      {"date": "2025-09-19", "water_level": 12.1},
+      {"date": "2025-09-20", "water_level": 11.9},
+      {"date": "2025-09-21", "water_level": 11.8}
+    ]
+  },
+  {
+    "id": "DWLR_003",
+    "name": "Sitabuldi Fort Station, Nagpur",
+    "location": { "lat": 21.1458, "lng": 79.0882 },
+    "status": "Normal",
+    "wellDepth": 60,
+    "aquifer": "Granite",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 20.1},
+      {"date": "2025-09-16", "water_level": 20.3},
+      {"date": "2025-09-17", "water_level": 20.2},
+      {"date": "2025-09-18", "water_level": 20.5},
+      {"date": "2025-09-19", "water_level": 20.4},
+      {"date": "2025-09-20", "water_level": 20.6},
+      {"date": "2025-09-21", "water_level": 20.7}
+    ]
+  },
+  {
+    "id": "DWLR_004",
+    "name": "Amer Fort Station, Jaipur",
+    "location": { "lat": 26.9221, "lng": 75.7789 },
+    "status": "Alert",
+    "wellDepth": 42,
+    "aquifer": "Sandstone",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 8.5},
+      {"date": "2025-09-16", "water_level": 8.4},
+      {"date": "2025-09-17", "water_level": 8.2},
+      {"date": "2025-09-18", "water_level": 8.1},
+      {"date": "2025-09-19", "water_level": 7.9},
+      {"date": "2025-09-20", "water_level": 7.8},
+      {"date": "2025-09-21", "water_level": 7.6}
+    ]
+  },
+  {
+    "id": "DWLR_005",
+    "name": "Marina Beach Station, Chennai",
+    "location": { "lat": 13.0674, "lng": 80.2825 },
+    "status": "Normal",
+    "wellDepth": 58,
+    "aquifer": "Coastal Alluvium",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 18.2},
+      {"date": "2025-09-16", "water_level": 18.3},
+      {"date": "2025-09-17", "water_level": 18.1},
+      {"date": "2025-09-18", "water_level": 18.4},
+      {"date": "2025-09-19", "water_level": 18.5},
+      {"date": "2025-09-20", "water_level": 18.3},
+      {"date": "2025-09-21", "water_level": 18.6}
+    ]
+  },
+  {
+    "id": "DWLR_006",
+    "name": "Gateway of India Station, Mumbai",
+    "location": { "lat": 18.9218, "lng": 72.8347 },
+    "status": "Normal",
+    "wellDepth": 52,
+    "aquifer": "Coastal Alluvium",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 16.8},
+      {"date": "2025-09-16", "water_level": 16.9},
+      {"date": "2025-09-17", "water_level": 16.7},
+      {"date": "2025-09-18", "water_level": 17.0},
+      {"date": "2025-09-19", "water_level": 17.1},
+      {"date": "2025-09-20", "water_level": 17.2},
+      {"date": "2025-09-21", "water_level": 17.0}
+    ]
+  },
+  {
+    "id": "DWLR_007",
+    "name": "Howrah Bridge Station, Kolkata",
+    "location": { "lat": 22.5850, "lng": 88.3468 },
+    "status": "Warning",
+    "wellDepth": 49,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 13.5},
+      {"date": "2025-09-16", "water_level": 13.3},
+      {"date": "2025-09-17", "water_level": 13.2},
+      {"date": "2025-09-18", "water_level": 13.0},
+      {"date": "2025-09-19", "water_level": 12.9},
+      {"date": "2025-09-20", "water_level": 12.8},
+      {"date": "2025-09-21", "water_level": 12.7}
+    ]
+  },
+  {
+    "id": "DWLR_008",
+    "name": "Charminar Station, Hyderabad",
+    "location": { "lat": 17.3616, "lng": 78.4747 },
+    "status": "Alert",
+    "wellDepth": 46,
+    "aquifer": "Granite",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 9.2},
+      {"date": "2025-09-16", "water_level": 9.1},
+      {"date": "2025-09-17", "water_level": 9.0},
+      {"date": "2025-09-18", "water_level": 8.8},
+      {"date": "2025-09-19", "water_level": 8.7},
+      {"date": "2025-09-20", "water_level": 8.6},
+      {"date": "2025-09-21", "water_level": 8.5}
+    ]
+  },
+  {
+    "id": "DWLR_009",
+    "name": "India Gate Station, New Delhi",
+    "location": { "lat": 28.6129, "lng": 77.2295 },
+    "status": "Normal",
+    "wellDepth": 57,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 14.1},
+      {"date": "2025-09-16", "water_level": 14.0},
+      {"date": "2025-09-17", "water_level": 14.2},
+      {"date": "2025-09-18", "water_level": 14.3},
+      {"date": "2025-09-19", "water_level": 14.4},
+      {"date": "2025-09-20", "water_level": 14.3},
+      {"date": "2025-09-21", "water_level": 14.5}
+    ]
+  },
+  {
+    "id": "DWLR_010",
+    "name": "Sabarmati Riverfront Station, Ahmedabad",
+    "location": { "lat": 23.0338, "lng": 72.5850 },
+    "status": "Warning",
+    "wellDepth": 50,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 11.3},
+      {"date": "2025-09-16", "water_level": 11.2},
+      {"date": "2025-09-17", "water_level": 11.0},
+      {"date": "2025-09-18", "water_level": 10.9},
+      {"date": "2025-09-19", "water_level": 10.8},
+      {"date": "2025-09-20", "water_level": 10.7},
+      {"date": "2025-09-21", "water_level": 10.6}
+    ]
+  },
+  {
+    "id": "DWLR_011",
+    "name": "Varanasi Ghats Station, Varanasi",
+    "location": { "lat": 25.3176, "lng": 82.9739 },
+    "status": "Normal",
+    "wellDepth": 54,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 16.0},
+      {"date": "2025-09-16", "water_level": 15.9},
+      {"date": "2025-09-17", "water_level": 16.1},
+      {"date": "2025-09-18", "water_level": 16.2},
+      {"date": "2025-09-19", "water_level": 16.3},
+      {"date": "2025-09-20", "water_level": 16.1},
+      {"date": "2025-09-21", "water_level": 16.4}
+    ]
+  },
+  {
+    "id": "DWLR_012",
+    "name": "Puri Beach Station, Puri",
+    "location": { "lat": 19.8135, "lng": 85.8312 },
+    "status": "Alert",
+    "wellDepth": 44,
+    "aquifer": "Coastal Alluvium",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 7.6},
+      {"date": "2025-09-16", "water_level": 7.5},
+      {"date": "2025-09-17", "water_level": 7.4},
+      {"date": "2025-09-18", "water_level": 7.3},
+      {"date": "2025-09-19", "water_level": 7.2},
+      {"date": "2025-09-20", "water_level": 7.1},
+      {"date": "2025-09-21", "water_level": 7.0}
+    ]
+  },
+  {
+    "id": "DWLR_013",
+    "name": "Panaji Riverfront Station, Goa",
+    "location": { "lat": 15.4909, "lng": 73.8278 },
+    "status": "Normal",
+    "wellDepth": 47,
+    "aquifer": "Coastal Alluvium",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 13.1},
+      {"date": "2025-09-16", "water_level": 13.2},
+      {"date": "2025-09-17", "water_level": 13.0},
+      {"date": "2025-09-18", "water_level": 13.3},
+      {"date": "2025-09-19", "water_level": 13.4},
+      {"date": "2025-09-20", "water_level": 13.2},
+      {"date": "2025-09-21", "water_level": 13.5}
+    ]
+  },
+  {
+    "id": "DWLR_014",
+    "name": "Shillong Peak Station, Shillong",
+    "location": { "lat": 25.5788, "lng": 91.8933 },
+    "status": "Warning",
+    "wellDepth": 40,
+    "aquifer": "Granite",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 10.4},
+      {"date": "2025-09-16", "water_level": 10.3},
+      {"date": "2025-09-17", "water_level": 10.2},
+      {"date": "2025-09-18", "water_level": 10.1},
+      {"date": "2025-09-19", "water_level": 10.0},
+      {"date": "2025-09-20", "water_level": 9.9},
+      {"date": "2025-09-21", "water_level": 9.8}
+    ]
+  },
+  {
+    "id": "DWLR_015",
+    "name": "Jammu Tawi Station, Jammu",
+    "location": { "lat": 32.7266, "lng": 74.8570 },
+    "status": "Normal",
+    "wellDepth": 53,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 15.5},
+      {"date": "2025-09-16", "water_level": 15.6},
+      {"date": "2025-09-17", "water_level": 15.4},
+      {"date": "2025-09-18", "water_level": 15.3},
+      {"date": "2025-09-19", "water_level": 15.2},
+      {"date": "2025-09-20", "water_level": 15.1},
+      {"date": "2025-09-21", "water_level": 15.0}
+    ]
+  },
+  {
+    "id": "DWLR_016",
+    "name": "Lucknow Gomti Nagar Station, Lucknow",
+    "location": { "lat": 26.8467, "lng": 80.9462 },
+    "status": "Alert",
+    "wellDepth": 45,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 9.0},
+      {"date": "2025-09-16", "water_level": 8.9},
+      {"date": "2025-09-17", "water_level": 8.8},
+      {"date": "2025-09-18", "water_level": 8.7},
+      {"date": "2025-09-19", "water_level": 8.6},
+      {"date": "2025-09-20", "water_level": 8.5},
+      {"date": "2025-09-21", "water_level": 8.4}
+    ]
+  },
+  {
+    "id": "DWLR_017",
+    "name": "Patna Ganga Ghat Station, Patna",
+    "location": { "lat": 25.5941, "lng": 85.1376 },
+    "status": "Normal",
+    "wellDepth": 56,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 14.6},
+      {"date": "2025-09-16", "water_level": 14.5},
+      {"date": "2025-09-17", "water_level": 14.7},
+      {"date": "2025-09-18", "water_level": 14.8},
+      {"date": "2025-09-19", "water_level": 14.9},
+      {"date": "2025-09-20", "water_level": 14.8},
+      {"date": "2025-09-21", "water_level": 15.0}
+    ]
+  },
+  {
+    "id": "DWLR_018",
+    "name": "Chandigarh Sukhna Lake Station, Chandigarh",
+    "location": { "lat": 30.7333, "lng": 76.7794 },
+    "status": "Warning",
+    "wellDepth": 51,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 12.4},
+      {"date": "2025-09-16", "water_level": 12.3},
+      {"date": "2025-09-17", "water_level": 12.2},
+      {"date": "2025-09-18", "water_level": 12.1},
+      {"date": "2025-09-19", "water_level": 12.0},
+      {"date": "2025-09-20", "water_level": 11.9},
+      {"date": "2025-09-21", "water_level": 11.8}
+    ]
+  },
+  {
+    "id": "DWLR_019",
+    "name": "Ranchi Kanke Dam Station, Ranchi",
+    "location": { "lat": 23.3441, "lng": 85.3096 },
+    "status": "Normal",
+    "wellDepth": 48,
+    "aquifer": "Granite",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 13.7},
+      {"date": "2025-09-16", "water_level": 13.6},
+      {"date": "2025-09-17", "water_level": 13.8},
+      {"date": "2025-09-18", "water_level": 13.9},
+      {"date": "2025-09-19", "water_level": 14.0},
+      {"date": "2025-09-20", "water_level": 13.9},
+      {"date": "2025-09-21", "water_level": 14.1}
+    ]
+  },
+  {
+    "id": "DWLR_020",
+    "name": "Raipur Telibandha Lake Station, Raipur",
+    "location": { "lat": 21.2514, "lng": 81.6296 },
+    "status": "Alert",
+    "wellDepth": 43,
+    "aquifer": "Basalt",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 8.2},
+      {"date": "2025-09-16", "water_level": 8.1},
+      {"date": "2025-09-17", "water_level": 8.0},
+      {"date": "2025-09-18", "water_level": 7.9},
+      {"date": "2025-09-19", "water_level": 7.8},
+      {"date": "2025-09-20", "water_level": 7.7},
+      {"date": "2025-09-21", "water_level": 7.6}
+    ]
+  },
+  {
+    "id": "DWLR_021",
+    "name": "Kochi Backwaters Station, Kochi",
+    "location": { "lat": 9.9312, "lng": 76.2673 },
+    "status": "Normal",
+    "wellDepth": 55,
+    "aquifer": "Coastal Alluvium",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 17.3},
+      {"date": "2025-09-16", "water_level": 17.2},
+      {"date": "2025-09-17", "water_level": 17.4},
+      {"date": "2025-09-18", "water_level": 17.5},
+      {"date": "2025-09-19", "water_level": 17.6},
+      {"date": "2025-09-20", "water_level": 17.5},
+      {"date": "2025-09-21", "water_level": 17.7}
+    ]
+  },
+  {
+    "id": "DWLR_022",
+    "name": "Thiruvananthapuram Kovalam Station, Thiruvananthapuram",
+    "location": { "lat": 8.5241, "lng": 76.9366 },
+    "status": "Warning",
+    "wellDepth": 47,
+    "aquifer": "Coastal Alluvium",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 11.5},
+      {"date": "2025-09-16", "water_level": 11.4},
+      {"date": "2025-09-17", "water_level": 11.3},
+      {"date": "2025-09-18", "water_level": 11.2},
+      {"date": "2025-09-19", "water_level": 11.1},
+      {"date": "2025-09-20", "water_level": 11.0},
+      {"date": "2025-09-21", "water_level": 10.9}
+    ]
+  },
+  {
+    "id": "DWLR_023",
+    "name": "Bengaluru Lalbagh Station, Bengaluru",
+    "location": { "lat": 12.9716, "lng": 77.5946 },
+    "status": "Alert",
+    "wellDepth": 42,
+    "aquifer": "Granite",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 8.9},
+      {"date": "2025-09-16", "water_level": 8.8},
+      {"date": "2025-09-17", "water_level": 8.7},
+      {"date": "2025-09-18", "water_level": 8.6},
+      {"date": "2025-09-19", "water_level": 8.5},
+      {"date": "2025-09-20", "water_level": 8.4},
+      {"date": "2025-09-21", "water_level": 8.3}
+    ]
+  },
+  {
+    "id": "DWLR_024",
+    "name": "Mysuru Palace Station, Mysuru",
+    "location": { "lat": 12.2958, "lng": 76.6394 },
+    "status": "Normal",
+    "wellDepth": 49,
+    "aquifer": "Basalt",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 13.0},
+      {"date": "2025-09-16", "water_level": 12.9},
+      {"date": "2025-09-17", "water_level": 13.1},
+      {"date": "2025-09-18", "water_level": 13.2},
+      {"date": "2025-09-19", "water_level": 13.3},
+      {"date": "2025-09-20", "water_level": 13.2},
+      {"date": "2025-09-21", "water_level": 13.4}
+    ]
+  },
+  {
+    "id": "DWLR_025",
+    "name": "Pune Shanivar Wada Station, Pune",
+    "location": { "lat": 18.5204, "lng": 73.8567 },
+    "status": "Warning",
+    "wellDepth": 46,
+    "aquifer": "Basalt",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 10.7},
+      {"date": "2025-09-16", "water_level": 10.6},
+      {"date": "2025-09-17", "water_level": 10.5},
+      {"date": "2025-09-18", "water_level": 10.4},
+      {"date": "2025-09-19", "water_level": 10.3},
+      {"date": "2025-09-20", "water_level": 10.2},
+      {"date": "2025-09-21", "water_level": 10.1}
+    ]
+  },
+  {
+    "id": "DWLR_026",
+    "name": "Nashik Godavari Ghat Station, Nashik",
+    "location": { "lat": 19.9975, "lng": 73.7898 },
+    "status": "Normal",
+    "wellDepth": 50,
+    "aquifer": "Basalt",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 14.2},
+      {"date": "2025-09-16", "water_level": 14.1},
+      {"date": "2025-09-17", "water_level": 14.3},
+      {"date": "2025-09-18", "water_level": 14.4},
+      {"date": "2025-09-19", "water_level": 14.5},
+      {"date": "2025-09-20", "water_level": 14.4},
+      {"date": "2025-09-21", "water_level": 14.6}
+    ]
+  },
+  {
+    "id": "DWLR_027",
+    "name": "Surat Tapi Riverside Station, Surat",
+    "location": { "lat": 21.1702, "lng": 72.8311 },
+    "status": "Alert",
+    "wellDepth": 44,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 9.3},
+      {"date": "2025-09-16", "water_level": 9.2},
+      {"date": "2025-09-17", "water_level": 9.1},
+      {"date": "2025-09-18", "water_level": 9.0},
+      {"date": "2025-09-19", "water_level": 8.9},
+      {"date": "2025-09-20", "water_level": 8.8},
+      {"date": "2025-09-21", "water_level": 8.7}
+    ]
+  },
+  {
+    "id": "DWLR_028",
+    "name": "Bhopal Upper Lake Station, Bhopal",
+    "location": { "lat": 23.2547, "lng": 77.4029 },
+    "status": "Normal",
+    "wellDepth": 53,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 15.0},
+      {"date": "2025-09-16", "water_level": 15.1},
+      {"date": "2025-09-17", "water_level": 15.2},
+      {"date": "2025-09-18", "water_level": 15.3},
+      {"date": "2025-09-19", "water_level": 15.4},
+      {"date": "2025-09-20", "water_level": 15.3},
+      {"date": "2025-09-21", "water_level": 15.5}
+    ]
+  },
+  {
+    "id": "DWLR_029",
+    "name": "Indore Pithampur Station, Indore",
+    "location": { "lat": 22.7196, "lng": 75.8577 },
+    "status": "Warning",
+    "wellDepth": 48,
+    "aquifer": "Basalt",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 11.8},
+      {"date": "2025-09-16", "water_level": 11.7},
+      {"date": "2025-09-17", "water_level": 11.6},
+      {"date": "2025-09-18", "water_level": 11.5},
+      {"date": "2025-09-19", "water_level": 11.4},
+      {"date": "2025-09-20", "water_level": 11.3},
+      {"date": "2025-09-21", "water_level": 11.2}
+    ]
+  },
+  {
+    "id": "DWLR_030",
+    "name": "Nagpur MIHAN Station, Nagpur",
+    "location": { "lat": 21.1458, "lng": 79.0882 },
+    "status": "Normal",
+    "wellDepth": 52,
+    "aquifer": "Granite",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 18.9},
+      {"date": "2025-09-16", "water_level": 19.0},
+      {"date": "2025-09-17", "water_level": 19.1},
+      {"date": "2025-09-18", "water_level": 19.2},
+      {"date": "2025-09-19", "water_level": 19.3},
+      {"date": "2025-09-20", "water_level": 19.2},
+      {"date": "2025-09-21", "water_level": 19.4}
+    ]
+  },
+  {
+    "id": "DWLR_031",
+    "name": "Jaipur Mansarovar Station, Jaipur",
+    "location": { "lat": 26.9124, "lng": 75.7873 },
+    "status": "Alert",
+    "wellDepth": 43,
+    "aquifer": "Sandstone",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 8.1},
+      {"date": "2025-09-16", "water_level": 8.0},
+      {"date": "2025-09-17", "water_level": 7.9},
+      {"date": "2025-09-18", "water_level": 7.8},
+      {"date": "2025-09-19", "water_level": 7.7},
+      {"date": "2025-09-20", "water_level": 7.6},
+      {"date": "2025-09-21", "water_level": 7.5}
+    ]
+  },
+  {
+    "id": "DWLR_032",
+    "name": "Udaipur Fateh Sagar Station, Udaipur",
+    "location": { "lat": 24.5854, "lng": 73.7125 },
+    "status": "Normal",
+    "wellDepth": 51,
+    "aquifer": "Sandstone",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 13.9},
+      {"date": "2025-09-16", "water_level": 13.8},
+      {"date": "2025-09-17", "water_level": 14.0},
+      {"date": "2025-09-18", "water_level": 14.1},
+      {"date": "2025-09-19", "water_level": 14.2},
+      {"date": "2025-09-20", "water_level": 14.1},
+      {"date": "2025-09-21", "water_level": 14.3}
+    ]
+  },
+  {
+    "id": "DWLR_033",
+    "name": "Ahmedabad GIFT City Station, Gandhinagar",
+    "location": { "lat": 23.2156, "lng": 72.6369 },
+    "status": "Warning",
+    "wellDepth": 48,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 11.2},
+      {"date": "2025-09-16", "water_level": 11.1},
+      {"date": "2025-09-17", "water_level": 11.0},
+      {"date": "2025-09-18", "water_level": 10.9},
+      {"date": "2025-09-19", "water_level": 10.8},
+      {"date": "2025-09-20", "water_level": 10.7},
+      {"date": "2025-09-21", "water_level": 10.6}
+    ]
+  },
+  {
+    "id": "DWLR_034",
+    "name": "Kolkata New Town Station, Kolkata",
+    "location": { "lat": 22.5958, "lng": 88.4790 },
+    "status": "Normal",
+    "wellDepth": 55,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 15.1},
+      {"date": "2025-09-16", "water_level": 15.0},
+      {"date": "2025-09-17", "water_level": 15.2},
+      {"date": "2025-09-18", "water_level": 15.3},
+      {"date": "2025-09-19", "water_level": 15.4},
+      {"date": "2025-09-20", "water_level": 15.3},
+      {"date": "2025-09-21", "water_level": 15.5}
+    ]
+  },
+  {
+    "id": "DWLR_035",
+    "name": "Hyderabad HiTec City Station, Hyderabad",
+    "location": { "lat": 17.4483, "lng": 78.3915 },
+    "status": "Alert",
+    "wellDepth": 45,
+    "aquifer": "Granite",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 9.4},
+      {"date": "2025-09-16", "water_level": 9.3},
+      {"date": "2025-09-17", "water_level": 9.2},
+      {"date": "2025-09-18", "water_level": 9.1},
+      {"date": "2025-09-19", "water_level": 9.0},
+      {"date": "2025-09-20", "water_level": 8.9},
+      {"date": "2025-09-21", "water_level": 8.8}
+    ]
+  },
+  {
+    "id": "DWLR_036",
+    "name": "Chennai IT Corridor Station, Chennai",
+    "location": { "lat": 12.8996, "lng": 80.2270 },
+    "status": "Normal",
+    "wellDepth": 52,
+    "aquifer": "Coastal Alluvium",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 16.6},
+      {"date": "2025-09-16", "water_level": 16.5},
+      {"date": "2025-09-17", "water_level": 16.7},
+      {"date": "2025-09-18", "water_level": 16.8},
+      {"date": "2025-09-19", "water_level": 16.9},
+      {"date": "2025-09-20", "water_level": 16.8},
+      {"date": "2025-09-21", "water_level": 17.0}
+    ]
+  },
+  {
+    "id": "DWLR_037",
+    "name": "Coimbatore Noyyal Station, Coimbatore",
+    "location": { "lat": 11.0168, "lng": 76.9558 },
+    "status": "Warning",
+    "wellDepth": 48,
+    "aquifer": "Basalt",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 12.0},
+      {"date": "2025-09-16", "water_level": 11.9},
+      {"date": "2025-09-17", "water_level": 11.8},
+      {"date": "2025-09-18", "water_level": 11.7},
+      {"date": "2025-09-19", "water_level": 11.6},
+      {"date": "2025-09-20", "water_level": 11.5},
+      {"date": "2025-09-21", "water_level": 11.4}
+    ]
+  },
+  {
+    "id": "DWLR_038",
+    "name": "Madurai Vaigai Station, Madurai",
+    "location": { "lat": 9.9252, "lng": 78.1198 },
+    "status": "Normal",
+    "wellDepth": 49,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 13.3},
+      {"date": "2025-09-16", "water_level": 13.2},
+      {"date": "2025-09-17", "water_level": 13.4},
+      {"date": "2025-09-18", "water_level": 13.5},
+      {"date": "2025-09-19", "water_level": 13.6},
+      {"date": "2025-09-20", "water_level": 13.5},
+      {"date": "2025-09-21", "water_level": 13.7}
+    ]
+  },
+  {
+    "id": "DWLR_039",
+    "name": "Visakhapatnam Beach Road Station, Visakhapatnam",
+    "location": { "lat": 17.6868, "lng": 83.2185 },
+    "status": "Alert",
+    "wellDepth": 44,
+    "aquifer": "Coastal Alluvium",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 8.4},
+      {"date": "2025-09-16", "water_level": 8.3},
+      {"date": "2025-09-17", "water_level": 8.2},
+      {"date": "2025-09-18", "water_level": 8.1},
+      {"date": "2025-09-19", "water_level": 8.0},
+      {"date": "2025-09-20", "water_level": 7.9},
+      {"date": "2025-09-21", "water_level": 7.8}
+    ]
+  },
+  {
+    "id": "DWLR_040",
+    "name": "Vijayawada Prakasam Barrage Station, Vijayawada",
+    "location": { "lat": 16.5062, "lng": 80.6480 },
+    "status": "Normal",
+    "wellDepth": 52,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 14.0},
+      {"date": "2025-09-16", "water_level": 13.9},
+      {"date": "2025-09-17", "water_level": 14.1},
+      {"date": "2025-09-18", "water_level": 14.2},
+      {"date": "2025-09-19", "water_level": 14.3},
+      {"date": "2025-09-20", "water_level": 14.2},
+      {"date": "2025-09-21", "water_level": 14.4}
+    ]
+  },
+  {
+    "id": "DWLR_041",
+    "name": "Guwahati Brahmaputra Station, Guwahati",
+    "location": { "lat": 26.1445, "lng": 91.7362 },
+    "status": "Warning",
+    "wellDepth": 47,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 11.1},
+      {"date": "2025-09-16", "water_level": 11.0},
+      {"date": "2025-09-17", "water_level": 10.9},
+      {"date": "2025-09-18", "water_level": 10.8},
+      {"date": "2025-09-19", "water_level": 10.7},
+      {"date": "2025-09-20", "water_level": 10.6},
+      {"date": "2025-09-21", "water_level": 10.5}
+    ]
+  },
+  {
+    "id": "DWLR_042",
+    "name": "Agartala Howrah River Station, Agartala",
+    "location": { "lat": 23.8315, "lng": 91.2868 },
+    "status": "Normal",
+    "wellDepth": 48,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 13.0},
+      {"date": "2025-09-16", "water_level": 12.9},
+      {"date": "2025-09-17", "water_level": 13.1},
+      {"date": "2025-09-18", "water_level": 13.2},
+      {"date": "2025-09-19", "water_level": 13.3},
+      {"date": "2025-09-20", "water_level": 13.2},
+      {"date": "2025-09-21", "water_level": 13.4}
+    ]
+  },
+  {
+    "id": "DWLR_043",
+    "name": "Imphal Loktak Lake Station, Imphal",
+    "location": { "lat": 24.8170, "lng": 93.9368 },
+    "status": "Alert",
+    "wellDepth": 42,
+    "aquifer": "Granite",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 8.0},
+      {"date": "2025-09-16", "water_level": 7.9},
+      {"date": "2025-09-17", "water_level": 7.8},
+      {"date": "2025-09-18", "water_level": 7.7},
+      {"date": "2025-09-19", "water_level": 7.6},
+      {"date": "2025-09-20", "water_level": 7.5},
+      {"date": "2025-09-21", "water_level": 7.4}
+    ]
+  },
+  {
+    "id": "DWLR_044",
+    "name": "Aizawl Tlawng River Station, Aizawl",
+    "location": { "lat": 23.7271, "lng": 92.7176 },
+    "status": "Normal",
+    "wellDepth": 46,
+    "aquifer": "Granite",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 12.5},
+      {"date": "2025-09-16", "water_level": 12.4},
+      {"date": "2025-09-17", "water_level": 12.6},
+      {"date": "2025-09-18", "water_level": 12.7},
+      {"date": "2025-09-19", "water_level": 12.8},
+      {"date": "2025-09-20", "water_level": 12.7},
+      {"date": "2025-09-21", "water_level": 12.9}
+    ]
+  },
+  {
+    "id": "DWLR_045",
+    "name": "Kohima Dzükou Valley Station, Kohima",
+    "location": { "lat": 25.6747, "lng": 94.1100 },
+    "status": "Warning",
+    "wellDepth": 43,
+    "aquifer": "Granite",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 10.0},
+      {"date": "2025-09-16", "water_level": 9.9},
+      {"date": "2025-09-17", "water_level": 9.8},
+      {"date": "2025-09-18", "water_level": 9.7},
+      {"date": "2025-09-19", "water_level": 9.6},
+      {"date": "2025-09-20", "water_level": 9.5},
+      {"date": "2025-09-21", "water_level": 9.4}
+    ]
+  },
+  {
+    "id": "DWLR_046",
+    "name": "Itanagar Siang River Station, Itanagar",
+    "location": { "lat": 27.0844, "lng": 93.6053 },
+    "status": "Normal",
+    "wellDepth": 47,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 13.6},
+      {"date": "2025-09-16", "water_level": 13.5},
+      {"date": "2025-09-17", "water_level": 13.7},
+      {"date": "2025-09-18", "water_level": 13.8},
+      {"date": "2025-09-19", "water_level": 13.9},
+      {"date": "2025-09-20", "water_level": 13.8},
+      {"date": "2025-09-21", "water_level": 14.0}
+    ]
+  },
+  {
+    "id": "DWLR_047",
+    "name": "Shimla Ridge Station, Shimla",
+    "location": { "lat": 31.1048, "lng": 77.1734 },
+    "status": "Alert",
+    "wellDepth": 41,
+    "aquifer": "Granite",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 7.5},
+      {"date": "2025-09-16", "water_level": 7.4},
+      {"date": "2025-09-17", "water_level": 7.3},
+      {"date": "2025-09-18", "water_level": 7.2},
+      {"date": "2025-09-19", "water_level": 7.1},
+      {"date": "2025-09-20", "water_level": 7.0},
+      {"date": "2025-09-21", "water_level": 6.9}
+    ]
+  },
+  {
+    "id": "DWLR_048",
+    "name": "Dehradun Doon Valley Station, Dehradun",
+    "location": { "lat": 30.3165, "lng": 78.0322 },
+    "status": "Normal",
+    "wellDepth": 50,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 14.8},
+      {"date": "2025-09-16", "water_level": 14.7},
+      {"date": "2025-09-17", "water_level": 14.9},
+      {"date": "2025-09-18", "water_level": 15.0},
+      {"date": "2025-09-19", "water_level": 15.1},
+      {"date": "2025-09-20", "water_level": 15.0},
+      {"date": "2025-09-21", "water_level": 15.2}
+    ]
+  },
+  {
+    "id": "DWLR_049",
+    "name": "Srinagar Dal Lake Station, Srinagar",
+    "location": { "lat": 34.0837, "lng": 74.7973 },
+    "status": "Warning",
+    "wellDepth": 45,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 11.0},
+      {"date": "2025-09-16", "water_level": 10.9},
+      {"date": "2025-09-17", "water_level": 10.8},
+      {"date": "2025-09-18", "water_level": 10.7},
+      {"date": "2025-09-19", "water_level": 10.6},
+      {"date": "2025-09-20", "water_level": 10.5},
+      {"date": "2025-09-21", "water_level": 10.4}
+    ]
+  },
+  {
+    "id": "DWLR_050",
+    "name": "Leh Indus Valley Station, Leh",
+    "location": { "lat": 34.1526, "lng": 77.5770 },
+    "status": "Normal",
+    "wellDepth": 39,
+    "aquifer": "Granite",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 9.8},
+      {"date": "2025-09-16", "water_level": 9.7},
+      {"date": "2025-09-17", "water_level": 9.9},
+      {"date": "2025-09-18", "water_level": 10.0},
+      {"date": "2025-09-19", "water_level": 10.1},
+      {"date": "2025-09-20", "water_level": 10.0},
+      {"date": "2025-09-21", "water_level": 10.2}
+    ]
+  }
+]
