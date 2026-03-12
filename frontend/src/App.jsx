@@ -1,6 +1,6 @@
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Dashboard from './components/Dashboard';
-import LoginPage from './pages/LoginPage';
+import LandingPage from './pages/LandingPage';
 
 const AppContent = () => {
   const { isAuthenticated, isLoading } = useAuth();
@@ -17,7 +17,7 @@ const AppContent = () => {
   }
 
   if (!isAuthenticated) {
-    return <LoginPage />;
+    return <LandingPage />;
   }
 
   return <Dashboard />;
