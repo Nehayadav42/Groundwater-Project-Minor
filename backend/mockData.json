@@ -1,0 +1,87 @@
+[
+  {
+    "id": "DWLR_001",
+    "name": "Shyamla Hills Station, Bhopal",
+    "location": { "lat": 23.2599, "lng": 77.4126 },
+    "status": "Normal",
+    "wellDepth": 55,
+    "aquifer": "Alluvial",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 15.2},
+      {"date": "2025-09-16", "water_level": 15.1},
+      {"date": "2025-09-17", "water_level": 15.5},
+      {"date": "2025-09-18", "water_level": 15.4},
+      {"date": "2025-09-19", "water_level": 15.6},
+      {"date": "2025-09-20", "water_level": 15.5},
+      {"date": "2025-09-21", "water_level": 15.7}
+    ]
+  },
+  {
+    "id": "DWLR_002",
+    "name": "Rajwada Palace Station, Indore",
+    "location": { "lat": 22.7196, "lng": 75.8577 },
+    "status": "Warning",
+    "wellDepth": 48,
+    "aquifer": "Basalt",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 12.8},
+      {"date": "2025-09-16", "water_level": 12.6},
+      {"date": "2025-09-17", "water_level": 12.5},
+      {"date": "2025-09-18", "water_level": 12.2},
+      {"date": "2025-09-19", "water_level": 12.1},
+      {"date": "2025-09-20", "water_level": 11.9},
+      {"date": "2025-09-21", "water_level": 11.8}
+    ]
+  },
+  {
+    "id": "DWLR_003",
+    "name": "Sitabuldi Fort Station, Nagpur",
+    "location": { "lat": 21.1458, "lng": 79.0882 },
+    "status": "Normal",
+    "wellDepth": 60,
+    "aquifer": "Granite",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 20.1},
+      {"date": "2025-09-16", "water_level": 20.3},
+      {"date": "2025-09-17", "water_level": 20.2},
+      {"date": "2025-09-18", "water_level": 20.5},
+      {"date": "2025-09-19", "water_level": 20.4},
+      {"date": "2025-09-20", "water_level": 20.6},
+      {"date": "2025-09-21", "water_level": 20.7}
+    ]
+  },
+  {
+    "id": "DWLR_004",
+    "name": "Amer Fort Station, Jaipur",
+    "location": { "lat": 26.9221, "lng": 75.7789 },
+    "status": "Alert",
+    "wellDepth": 42,
+    "aquifer": "Sandstone",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 8.5},
+      {"date": "2025-09-16", "water_level": 8.4},
+      {"date": "2025-09-17", "water_level": 8.2},
+      {"date": "2025-09-18", "water_level": 8.1},
+      {"date": "2025-09-19", "water_level": 7.9},
+      {"date": "2025-09-20", "water_level": 7.8},
+      {"date": "2025-09-21", "water_level": 7.6}
+    ]
+  },
+  {
+    "id": "DWLR_005",
+    "name": "Marina Beach Station, Chennai",
+    "location": { "lat": 13.0674, "lng": 80.2825 },
+    "status": "Normal",
+    "wellDepth": 58,
+    "aquifer": "Coastal Alluvium",
+    "time_series": [
+      {"date": "2025-09-15", "water_level": 18.2},
+      {"date": "2025-09-16", "water_level": 18.3},
+      {"date": "2025-09-17", "water_level": 18.1},
+      {"date": "2025-09-18", "water_level": 18.4},
+      {"date": "2025-09-19", "water_level": 18.5},
+      {"date": "2025-09-20", "water_level": 18.3},
+      {"date": "2025-09-21", "water_level": 18.6}
+    ]
+  }
+]
