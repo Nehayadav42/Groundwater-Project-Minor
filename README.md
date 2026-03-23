@@ -1,4 +1,4 @@
-##🌍 Real-Time Groundwater Resource Evaluation
+🌍 Real-Time Groundwater Resource Evaluation
 
 📌 Overview
 
